@@ -1,0 +1,14 @@
+<header class="banner">
+  <button id="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="menu"></button>
+</header>
+
+<nav id="menu" aria-hidden="true" aria-labelledby="menu-toggle" role="navigation">
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'fluctuations' %}">Fluctuations</a></li>
+        <li><a href="{% url 'new_rate' %}">Add new currency rate</a></li>
+    </ul>
+</nav>
+
+
+

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" role="main">
+    <article>
+
+        <h2>Hello, this is my Django pet-project</h2>
+        <p>This is a site for exchanging UAH to USD currencies. This project will be on
+            <strong><a href="https://github.com/Milenkolin">github</a></strong>.</p>
+        <p>
+            A little motivation for u! <br>
+            "Work hard. Push yourself, because no one else is going to do it for you."
+        </p>
+    </article>
+</div>
+<div class="cur_history">
+
+<h2>Currency rates history</h2>
+    {% for item in rates %}
+    <p>
+        {{ item.rate }}₴
+        {{ item.created_date|date:"d.m.Y" }}
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
+
+

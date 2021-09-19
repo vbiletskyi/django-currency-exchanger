@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class ExchangerConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'exchanger'
+    verbose_name = 'Обменник'

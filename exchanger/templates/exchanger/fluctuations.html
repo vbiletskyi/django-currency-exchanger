@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+{% if data %}
+    <div class="container">
+        <h2>No exchange rates available</h2>
+    </div>
+{% else %}
+<div class="media">
+    <p class="center_image"><img src="{% static 'plot/my_plot.jpg' %}"/></p>
+</div>
+
+{% endif %}
+{% endblock %}

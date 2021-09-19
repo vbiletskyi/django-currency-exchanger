@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div class="cur_history">
+
+<h2>Currency rates history</h2>
+    {% for item in rates %}
+    <p>
+        {{ item.rate }}₴
+        {{ item.created_date|date:"d.m.Y" }}
+    </p>
+    {% endfor %}
+</div>
+
+<div class="container">
+<h2>Add currency rate</h2>
+
+    <form action="{% url 'new_rate' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.non_field.errors }}
+        <button type="submit" class="btn btn-primary">Добавить курс</button>
+    </form>
+</div>
+{% endblock %}
