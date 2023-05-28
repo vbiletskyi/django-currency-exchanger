@@ -4,7 +4,7 @@ on:
     branches: [master]
 
 jobs:
-  setup_venv:
+  scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,3 +14,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    
+      - name: my-step
+        run: echo "Hello World!"
